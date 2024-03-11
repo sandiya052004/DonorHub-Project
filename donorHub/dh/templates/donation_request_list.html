@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Requests</title>
+    <style>
+        
+        .donation-request {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .description {
+            display: none;
+        }
+        .read-more {
+            color: blue;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Donation Requests</h1>
+    {% for donation_request in donation_requests %}
+    <div class="donation-request">
+        <h2>{{ donation_request.organization.name }}</h2>
+        <p>Donation Type: {{ donation_request.donation_type_requested }}</p>
+        <div class="description">
+            <p>{{ donation_request.additional_details }}</p>
+            <p>Contact Information: {{ donation_request.organization.contact_information }}</p>
+        </div>
+        <button class="read-more">Read More</button>
+    </div>
+    {% endfor %}
+    
+    <script>
+       
+        document.querySelectorAll('.read-more').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var description = this.previousElementSibling;
+                if (description.style.display === 'none') {
+                    description.style.display = 'block';
+                    this.textContent = 'Read Less';
+                } else {
+                    description.style.display = 'none';
+                    this.textContent = 'Read More';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

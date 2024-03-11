@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <style>
+        
+        body {
+            background-color: #f2f2f2; 
+            color: #000000; 
+            font-family: Arial, sans-serif;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff; 
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #000000; 
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button[type="submit"] {
+            background-color: #4B2E9E;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button[type="submit"]:hover {
+            background-color: #4B2E9E; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Add Organization</h1>
+    <form method="POST" action="{% url 'add_organization' %}">
+        {% csrf_token %}
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="contact_information">Contact Information:</label>
+        <input type="text" id="contact_information" name="contact_information" required>
+        
+        <label for="organization_type">Organization Type:</label>
+        <input type="text" id="organization_type" name="organization_type" required>
+        
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required>
+        
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

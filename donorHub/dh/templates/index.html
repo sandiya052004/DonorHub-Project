@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #F0F2F5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 0.5em;
+            color: #5E3EC6;
+            text-align: center; 
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 2em;
+            color: #666;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #5E3EC6;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+            border-radius: 30px;
+            transition: background-color 0.3s ease;
+            margin-bottom: 1em;
+            border: 2px solid #5E3EC6;
+            outline: none;
+        }
+
+        .cta-button:hover {
+            background-color: #4B2E9E;
+            border-color: #4B2E9E;
+        }
+
+        .about {
+            background-color: #FFF;
+            padding: 2em;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+            border: 2px solid #5E3EC6;
+            outline: none;
+        }
+
+        .about h2 {
+            font-size: 1em;
+            color: #5E3EC6;
+            margin-bottom: 0.5em;
+        }
+
+        .about p {
+            font-size: 1em;
+            color: #333;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <h1>WELCOME TO DONORHUB</h1>
+        <p>Discover what awaits you. Sign up now.</p>
+        <a href="{% url 'signup' %}" class="cta-button">Sign Up</a>
+        <a href="{% url 'add_organization' %}" class="cta-button">Add Organization</a>
+        <div class="about">
+            <h2>ABOUT US</h2>
+            <p><B><I>Our Donation Platform is a hub for connecting organizations in need with generous contributors like you.
+                Explore the list of current donation requests, ranging from essential supplies to specific services required by various organizations.
+                Ready to make a difference? Create a donation request to let others know about your organization's needs, or contribute to existing requests to support causes that matter to you.
+                Together, we can build a community focused on giving and making a positive impact.</I></B></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+

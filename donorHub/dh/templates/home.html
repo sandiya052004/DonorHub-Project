@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #F0F2F5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 0.5em;
+            color: #5E3EC6;
+            text-align: center; 
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 2em;
+            color: #666;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1em;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 1.1em;
+            border-radius: 30px;
+            transition: background-color 0.3s ease;
+            margin-right: 1em;
+            outline: none;
+        }
+
+        .purple-button {
+            background-color: #9B7EE3;
+            color: #fff;
+            border: 2px solid #9B7EE3;
+        }
+
+        .purple-button:hover {
+            background-color: #7B5EC2;
+            border-color: #7B5EC2;
+        }
+
+        .black-button {
+            background-color: #333;
+            color: #fff;
+            border: 2px solid #333;
+        }
+
+        .black-button:hover {
+            background-color: #222;
+            border-color: #222;
+        }
+
+        .about {
+            background-color: #FFF;
+            padding: 2em;
+            border-radius: 5px; 
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+            border: 2px solid #5E3EC6;
+            outline: none;
+        }
+
+        .about h2 {
+            font-size: 1em;
+            color: #5E3EC6;
+            margin-bottom: 0.5em;
+        }
+
+        .about p {
+            font-size: 1em;
+            color: #333;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <h1>WELCOME TO DONORHUB</h1>
+        <p>'GIVE THE GIFT OF LIFE'</p>
+        <div class="button-container">
+            <a href="donation_requests" class="cta-button purple-button">SUPPORT NOW</a>
+            <a href="create_donation_list" class="cta-button black-button">CREATE DONATION REQUEST</a>
+        </div>
+        <div class="about">
+            <h2>ABOUT US</h2>
+            <p><B><I>Our Donation Platform is a hub for connecting organizations in need with generous contributors like you.
+                Explore the list of current donation requests, ranging from essential supplies to specific services required by various organizations.
+                Ready to make a difference? Create a donation request to let others know about your organization's needs, or contribute to existing requests to support causes that matter to you.
+                Together, we can build a community focused on giving and making a positive impact.</I></B></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
